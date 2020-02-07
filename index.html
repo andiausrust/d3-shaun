@@ -10,12 +10,25 @@
 <body>
 
 <div class="canvas">
-    <svg width="600" height="600">
-        <rect></rect>
-    </svg>
 </div>
-
+<script src="https://www.gstatic.com/firebasejs/5.4.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.4.2/firebase-firestore.js"></script>
+<script>
+    // Initialize Firebase
+    const config = {
+        apiKey: "AIzaSyAUN3jTKl5J3u_Ru8PURZx6aMJrMRC7p8c",
+        authDomain: "d3-firebase-2e4d1.firebaseapp.com",
+        databaseURL: "https://d3-firebase-2e4d1.firebaseio.com",
+        projectId: "d3-firebase-2e4d1",
+        storageBucket: "d3-firebase-2e4d1.appspot.com",
+        messagingSenderId: "782456548792",
+        appId: "1:782456548792:web:d9fe7f9ac4f78dc38af34d"
+    };
+    firebase.initializeApp(config);
+    const db = firebase.firestore();
+    db.settings({ timestampsInSnapshots: true });
+</script>
 <script src="http://d3js.org/d3.v5.js"></script>
-<script src="index.js"></script>
+<script src="bar-master.js"></script>
 </body>
 </html>
